@@ -1,0 +1,74 @@
+.clients{
+    height: 100vh;
+    .bg('../img/client-bg_02.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .lg-block({
+        height: 100%;
+        padding: 20px 0;
+    });
+    // .sm-block({
+    //     height: 100%;
+    //     padding: 20px 0;
+    // });
+    .col-xl-4{
+        text-align: center;
+        margin-bottom: 10%;
+    }
+    .card{
+        perspective: 1000px;
+        transform-style: preserve-3d;
+        
+    }
+    &-item{
+        transition: transform 0.2s;
+        // background: rgba(#263238, 0.5);
+        padding: 10px 0;
+        // margin-top: 2%;
+        // margin-bottom: 2%;
+    }
+    &-logo{
+        padding-bottom: 15px;
+        height: 92px;
+        width: 80px;
+    }
+    &-name{
+        color: @white;
+        margin-bottom: 10px;
+        font-size: 22px;
+        .vs-block({
+            font-size: 14px;
+        });
+    }
+    &-profession{
+        color: @pink;
+        margin-bottom: 26px;
+        font-size: 16px;
+        .vs-block({
+            font-size: 12px;
+        });
+    }
+    &-description{
+        color: @gray;
+        font-style: italic;
+        font-size: 16px;
+        max-width: 330px;
+        margin: 0 auto;
+        line-height: 26px;
+        .vs-block({
+            font-size: 10px;
+            line-height: 18px;
+        });
+    }
+    &-logos{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        img{
+            .md-block({
+                width: 10%;
+            });
+        }
+    }
+}

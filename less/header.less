@@ -1,0 +1,114 @@
+.header{
+    // .bg('../video/ocean.jpg');
+    // background: #000;
+    // padding: 210px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    .sm-block({
+        padding: 20px 0;
+        max-height: 800px;
+    });
+    
+    h1{
+        font-size: 60px;
+        color: black;
+        max-width: 715px;
+        margin: 0 auto;
+        line-height: 1.4;
+        font-weight: 200;
+        background: rgba(#fff, 0.3);
+        border-radius: 10px;
+        .sm-block({
+            font-size: 30px;          
+        });
+        .md-block({
+            font-size: 45px;          
+        });
+    }
+    &-play{
+        // opacity: 0.8;
+       
+        &__item{
+            display: block;
+            margin: 40px auto 60px;
+            opacity: 0.8;
+            transition: all 0.5s ease-out;
+            .sm-block({
+                margin: 10px auto 30px  ;       
+            });
+            &:hover{
+                transform:scale(1.3);
+                opacity: 1;
+            }
+        }
+        
+    }
+    &-tryNow{
+        text-transform: uppercase;
+        background: @pink;
+        opacity: 0.5;
+        //----
+        padding:  17px 50px;
+        // width: 100%;
+        // height: 100%;
+        //----
+        border-radius: 4px;
+        font-size: 16px;
+        color: @white;
+        letter-spacing: 7px;
+        transition: 0.7s;
+        position: relative;
+       
+        .sm-block({
+            font-size: 10px;     
+            padding:  10px 25px;
+        });           
+        //  &:hover{
+        //     opacity: 1;
+        // }
+        &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(#fff, 0.5);
+            transform:translateX(-15em) skew(-35deg);
+            
+        }
+    
+        &:hover:before{
+            // transition: 2s;
+            animation-delay: moVe 5s;
+            animation: moVe 0.2s;
+        }
+        @keyframes moVe {
+            from {
+                transform: translateX(-15em) skewX(-35deg);
+            }
+            to {
+                transform: translateX(15em) skewX(-35deg);
+            }
+        }
+    }
+    &-tryNow:hover{
+        opacity: 1;
+    }
+    &-tryNow_cont{
+        overflow: hidden;
+        display: inline-flex;
+        height: 50px;
+        // justify-content: center;
+        // align-items: center;
+    }
+
+    &-item{
+        color: @gray;
+        margin-top: 35px;
+        font-weight: 300;
+    }
+}

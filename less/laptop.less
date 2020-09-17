@@ -1,0 +1,51 @@
+.laptop {
+    height: 100vh;
+    .bg('../img/laptop-bg_02.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .lg-block({
+        height: 100%;
+        padding: 10%;
+    });
+    .sm-block({
+        padding-left: 3%;
+        padding-right: 3%;
+    });
+    .md-block({
+        background-image: url('../img/decription-macbook_03.png');
+    });
+    .macbook{
+        width: 100%;
+        .xl-block({
+            display: none;
+            width: 75%;
+        });
+        .lg-block({
+
+        });
+    }
+    .subtitle{
+        margin-bottom: 2%;
+        .md-block({
+            font-size: 17px;
+            line-height: 22px;
+            margin-bottom: 25px;
+        });
+        .vs-block({
+            margin-bottom: 15px;
+        });
+    }
+    &_content{
+        margin-top: 40px;
+        color: @gray;
+        line-height: 26px;
+        .sm-block({
+            margin-top: 0;
+        });
+        .vs-block({
+            font-size: 10px;
+            line-height: 18px;
+        });
+    }
+}

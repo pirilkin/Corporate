@@ -1,0 +1,105 @@
+.footer{
+    .bg('../img/footer-bg_02.jpg');
+    padding: 81px 0 97px;
+    .sm-block({
+        margin-left: 5%;
+        margin-right: 5%;
+    });
+    &-one{
+        &__img{
+            margin-bottom: 12px;
+            width: 104px;
+        }
+        &__p{
+            font-size: 14px;
+            line-height: 26px;
+            color: @gray;
+        }
+    }
+    &-two, &-three{
+        padding-top: 16px;
+        h5{
+            font-size: 22px;
+            margin-bottom: 29px;
+            color: @subtitle;
+        }
+        li{
+            list-style: none;
+            text-decoration: none;
+            margin-bottom: 15px;
+            a{
+                color: @gray;
+                font-size: 14px;
+            }
+        }
+    }
+    &-two, &-three{
+        li a{
+            position: relative;
+        }
+        li a:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 100%;
+            background: @pink;
+            transform: scaleX(0);
+            transition: 0.2s;
+        }
+        li a:hover:before{
+            transform: scaleX(1);
+        }
+    }
+    &-four{
+        &__form{
+            display: flex;
+            margin-bottom: 19px;
+            input{
+                height: 48px;
+                border-radius: 0;
+            }
+            input[type="email"]{
+                width: 80%;
+                border: 1px solid @border;
+                border-right: none;
+                padding-left: 29px;
+                border-radius: 2px 0 0 2px;
+            }
+            input[type="submit"]{
+                width: 20%;
+                background-color: @pink;
+                background-image: url('../img/footer-arrow_03.png');
+                background-repeat: no-repeat;
+                background-position: center center;
+                border: none;
+                border-radius: 2px;
+                box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+            }
+            input:focus{
+                outline: none;
+            }
+        }
+        &__social{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            // max-width:264px;
+            li:nth-child(1){
+                // margin-left: 47px;
+            }
+            li:nth-child(4){
+                // margin-right: 47px;
+            }
+            i{
+                font-size: 23px;
+            }
+            .md-block({
+                max-width: 200px;
+            });
+        }
+        
+    }
+
+}

@@ -1,0 +1,134 @@
+.form{
+    padding: 90px 0;
+    background: #323969;
+    text-align: center;
+    .subtitle{
+        color: @white;
+        margin-bottom: 95px;
+        .md-block({
+            max-width: 90%;
+            margin: 0 auto 50px;
+        });
+        .vs-block({
+            font-size: 17px;
+            margin-bottom: 25px;
+            line-height: 22px;
+        });
+    }
+    
+    &-description{
+        position: relative;
+        // max-width: 390px;
+        margin: 0 auto 40px;
+        display: flex;
+        justify-content: space-between;
+        // display: flex;
+        flex-wrap: wrap;
+        .lg-block({
+           margin-bottom: 10px;
+        });
+        
+        input{
+            width: 24%;
+            height: 49px;
+            background: none;
+            border: 1px solid #999cb4;
+            border-radius: 4px;
+            padding-left: 27px;
+            
+            .lg-block({
+                width: 100%;     
+                margin-bottom: 20px;
+            });
+        }
+        &__tryNow{
+            position: absolute;
+            top: -65px;
+            right: 37px;
+            display: flex;
+            align-items: start;
+            .lg-block({
+                display: none;
+            });
+            &-item{
+                padding-top: 5px;
+                color: @browser;
+                .vs-block({
+                    display: none;
+                });
+            }
+
+            span{
+                padding-left: 16px;
+                color: @browser;
+                font-size: 16px;
+            }
+
+        }
+
+
+        input:focus{
+            outline: none;
+        }
+        input::placeholder{
+            font-size: 16px;
+            color: @browser;
+            .vs-block({
+                font-size: 12px;
+            });
+        }
+
+        input[type='submit']{
+            padding-left: 0;
+            background: @pink;
+            border: none;
+            color: @browser;
+            font-size: 16px;
+            position: relative;
+        }
+    }
+
+    &-additional{
+        display: none;
+        margin-bottom: 25px;
+        .lg-block({
+            display: block;
+        });
+        span{
+            color: @white;
+        }
+    }
+    .signUp{
+        line-height: 25px;
+    }
+    p , a{
+        color: @gray;
+    }
+    a{
+        border-bottom: 1px solid @gray;
+    }
+    .signUp{
+        a{
+            position: relative;
+            border-bottom: 1px solid rgba(@pink, 0.5);
+            
+        }
+        a:before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0%;
+            height: 2px;
+            background: @pink;
+            transition: 0.2s;
+        }
+        a:hover:before{
+            left: 0;
+            width: 100%;
+        }
+    }
+   
+
+    
+}
